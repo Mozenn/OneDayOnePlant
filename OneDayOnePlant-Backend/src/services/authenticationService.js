@@ -104,7 +104,7 @@ const sendVerificationMail = (receiverId, receiverEmail, receiverUsername) => {
     __dirname + path.sep + path.join("..", "views", "mail.ejs"),
     {
       username: receiverUsername,
-      link: `${process.env.FRONTEND_URL}/verify/${token}`,
+      link: `${process.env.API_URL}/verify/${token}`,
     }
   ).then((str) => {
     // TODO

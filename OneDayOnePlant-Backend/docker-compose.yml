@@ -26,8 +26,8 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: $ROOT_PASSWORD
       MONGO_INITDB_DATABASE: $MONGO_DB
     volumes:
-      - ./OneDayOnePlant-Backend/mongo/data:/data/db
-      - ./OneDayOnePlant-Backend/mongo/createUser.js:/docker-entrypoint-initdb.d/createUser.js:ro # to create manually
-      - ./OneDayOnePlant-Backend/mongo/initDb.js:/docker-entrypoint-initdb.d/initDb.js:ro
+      - ./mongo/data:/data/db
+      - ./mongo/createUser.js:/docker-entrypoint-initdb.d/createUser.js:ro # to create manually
+      - ./mongo/initDb.js:/docker-entrypoint-initdb.d/initDb.js:ro
     ports:
       - '27017:27017'
