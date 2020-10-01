@@ -1,0 +1,99 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titleContainer {
+  font-size: 1.5rem;
+  background-color: var(--color-primary-light);
+  margin: 4rem auto;
+  border-radius: 10px;
+  width: 40rem;
+}
+
+.title {
+  text-align: center;
+  color: white;
+  font-weight: 400;
+  margin: auto;
+  padding: 1rem;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+  margin-bottom: 5rem;
+}
+
+.firstRow {
+  display: flex;
+}
+
+.firstRow > *:first-child {
+  margin-right: 8vw;
+}
+
+.button {
+  font-size: 1.5rem;
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  border: solid 2px var(--color-primary);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0px 2px 3px 1px rgb(124, 124, 124);
+  text-decoration: underline;
+  transition: background-color 0.4s, color 0.4s;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: white;
+  background-color: var(--color-primary);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.footer {
+  margin-top: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer span {
+  border-top: solid 2px var(--color-primary);
+  width: 35%;
+  background-color: var(--color-secondary);
+}
+
+.footer p {
+  color: var(--color-secondary);
+  font-size: 1rem;
+}
+
+.footer a {
+  text-decoration: underline;
+  color: var(--color-primary);
+  transition: color 0.4s;
+}
+
+.footer a:hover {
+  color: var(--color-primary-dark);
+  transition: color 0.3s;
+}
+
+@media only screen and (max-width: 720px) {
+  .titleContainer {
+    font-size: 1.2rem;
+    width: 30rem;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .titleContainer {
+    font-size: 1rem;
+    width: 25rem;
+  }
+}

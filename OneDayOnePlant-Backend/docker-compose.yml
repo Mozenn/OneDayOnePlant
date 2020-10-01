@@ -1,0 +1,33 @@
+version: "3"
+services:
+  odop:
+    container_name: odop
+    restart: unless-stopped 
+    image: odop
+    env_file: .env
+    build: 
+      context: .
+      dockerfile: Dockerfile.dev
+    depends_on: 
+      - mongo
+    volumes:
+      - .:/home/node/app
+      - /home/node/app/node_modules
+    ports:
+      - "8443:8443"
+    
+  mongo:
+    container_name: mongo
+    restart: unless-stopped
+    image: mongo:4.4.1
+    env_file: .env
+    environment: 
+      MONGO_INITDB_ROOT_USERNAME: $ROOT_USERNAME
+      MONGO_INITDB_ROOT_PASSWORD: $ROOT_PASSWORD
+      MONGO_INITDB_DATABASE: $MONGO_DB
+    volumes:
+      - ./OneDayOnePlant-Backend/mongo/data:/data/db
+      - ./OneDayOnePlant-Backend/mongo/createUser.js:/docker-entrypoint-initdb.d/createUser.js:ro # to create manually
+      - ./OneDayOnePlant-Backend/mongo/initDb.js:/docker-entrypoint-initdb.d/initDb.js:ro
+    ports:
+      - '27017:27017'

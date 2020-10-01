@@ -1,0 +1,70 @@
+.container {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.logo {
+  height: 5rem;
+  margin: 0.3rem 1rem 0.3rem 0.3rem;
+}
+
+.titleLink {
+  /* margin-top: auto; */
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 2rem;
+  color: white;
+}
+
+.buttonContainer {
+  margin: 0 1rem 0 auto;
+  font-weight: 400;
+  display: flex;
+}
+
+.button {
+  background-color: var(--color-background, 1);
+  color: var(--color-primary-dark);
+  border: solid 2px var(--color-primary-dark);
+  border-radius: 10px;
+  font-size: 1rem;
+  padding: 0.3rem;
+  margin: 0.5rem;
+  font-weight: 400;
+  transition: background-color 0.4s, color 0.4s;
+  cursor: pointer;
+}
+
+.button:hover {
+  transition: background-color 0.3s, color 0.3s;
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.button:active {
+  transition: background-color 0.2s;
+  background-color: var(--color-primary-dark);
+}
+
+@media only screen and (max-width: 580px) {
+  .title {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .logo {
+    height: 3rem;
+  }
+
+  .button {
+    font-size: 0.8rem;
+  }
+}

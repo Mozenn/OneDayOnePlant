@@ -1,0 +1,107 @@
+.modal {
+  z-index: 1;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(var(--color-background-hex), 0.7);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--color-secondary-light);
+  border-radius: 20px;
+}
+
+.formElement {
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  margin: 3vh 4vw;
+
+  color: var(--color-primary-dark);
+}
+
+.formElementLabel {
+}
+
+.formElementInput {
+  border: 0.15em solid var(--color-primary-dark);
+  border-radius: 20px;
+  font-size: 1.2rem;
+  color: var(--color-secondary-dark);
+  padding-left: 0.5em;
+  width: 18rem;
+}
+
+.formElementInputError {
+  composes: formElementInput;
+  border: 0.15em solid rgb(182, 49, 45);
+}
+
+.errorMessage {
+  color: rgb(155, 72, 57);
+  font-size: 1.1rem;
+}
+
+.button {
+  font-size: 1.2rem;
+  background-color: var(--color-primary);
+  color: white;
+  border-style: none;
+  border-radius: 16px;
+  padding: 0.8rem;
+  box-shadow: 0px 2px 3px 1px rgb(124, 124, 124);
+  text-decoration: underline;
+  transition: background-color 0.4s, color 0.4s;
+  cursor: pointer;
+  margin: 1vh 0;
+}
+
+.button:hover {
+  transition: background-color 0.3s, color 0.3s;
+  background-color: var(--color-primary-dark);
+}
+
+.button:active {
+  transition: background-color 0.2s;
+  background-color: var(--color-primary-light);
+}
+
+.disabledButton {
+  font-size: 1.2rem;
+  background-color: rgb(103, 112, 99);
+  color: white;
+  border-style: none;
+  border-radius: 16px;
+  padding: 0.8rem;
+  box-shadow: 0px 2px 3px 1px rgb(124, 124, 124);
+  text-decoration: underline;
+  transition: background-color 0.4s, color 0.4s;
+  margin: 1vh 0;
+}
+
+.cancelButton {
+  composes: button;
+  font-size: 1rem;
+  background-color: var(--color-secondary);
+}
+
+.cancelButton:hover {
+  background-color: var(--color-secondary-dark);
+}
+
+.cancelButton:active {
+  background-color: var(--color-secondary-light);
+  color: var(--color-secondary-dark);
+}

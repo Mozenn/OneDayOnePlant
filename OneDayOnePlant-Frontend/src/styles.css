@@ -1,0 +1,60 @@
+:root {
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--color-background);
+
+  --color-primary: rgb(123, 168, 119);
+  --color-primary-light: rgb(186, 216, 179);
+  --color-primary-dark: rgb(71, 92, 68);
+  --color-secondary: rgb(148, 134, 107);
+  --color-secondary-light: rgb(241, 235, 224);
+  --color-secondary-dark: rgb(78, 67, 64);
+  --color-background: rgb(255, 255, 255);
+  --color-background-hex: 255, 255, 255;
+  --color-background-dark: rgb(87, 87, 87);
+}
+
+body {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 400;
+  margin: auto 0;
+  font-size: 18px;
+}
+
+.Toastify__toast--error {
+  background-color: var(--color-secondary-light);
+  color: var(--color-primary-dark);
+  border-radius: 15px;
+  font-size: 1rem;
+}
+
+.Toastify__toast--info {
+  background-color: var(--color-primary-light);
+  color: var(--color-secondary-dark);
+  border-radius: 15px;
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 1500px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  :root {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  :root {
+    font-size: 12px;
+  }
+}
