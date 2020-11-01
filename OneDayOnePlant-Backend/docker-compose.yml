@@ -7,7 +7,7 @@ services:
     env_file: .env
     build: 
       context: .
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
     depends_on: 
       - mongo
     volumes:
