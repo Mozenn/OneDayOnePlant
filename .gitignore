@@ -4,6 +4,9 @@ createUser.js
 *wait-for.sh
 init.json
 
+# scripts
+*/deploy-static.sh
+
 # Logs
 logs
 *.log

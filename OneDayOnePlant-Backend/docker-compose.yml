@@ -14,7 +14,7 @@ services:
       - .:/home/node/app
       - /home/node/app/node_modules
     ports:
-      - "8443:8443"
+        - "127.0.0.1:8443:8443"
     
   mongo:
     container_name: mongo
@@ -29,5 +29,3 @@ services:
       - ./mongo/data:/data/db
       - ./mongo/createUser.js:/docker-entrypoint-initdb.d/createUser.js:ro # to create manually
       - ./mongo/initDb.js:/docker-entrypoint-initdb.d/initDb.js:ro
-    ports:
-      - '27017:27017'
